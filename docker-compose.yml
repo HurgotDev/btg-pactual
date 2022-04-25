@@ -1,0 +1,33 @@
+version: "3.7"
+services:
+  fpv-api:
+    container_name: "container_fpv_api"
+    restart: always
+    build:
+      context: ./fpv-backend
+      dockerfile: Dockerfile
+    ports:
+      - 3030:3030
+    links:
+     - mongodb
+    # volumes:
+    #   - ./fpv-backend:/usr/src/app
+    #   - /usr/src/app/node_modules/bcrypt/
+  fpv-client:
+    container_name: "container_fpv_client"
+    restart: always
+    build:
+      context: ./fpv-frontend
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    # volumes:
+    #   - ./fpv-frontend:/usr/src/app
+  mongodb:
+    container_name: "container_mongo_db"
+    image: mongo
+    command: mongod --quiet
+    ports:
+      - 27018:27017
+    logging:
+      driver: "none"
