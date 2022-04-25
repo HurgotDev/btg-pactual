@@ -1,6 +1,6 @@
 # btg-pactual
 
-# CLonear los servicios
+# CLonar los servicios
 
 Luego de clonar esta repo, ubiquese dentro de la carpeta y clone los siguientes repos
 
