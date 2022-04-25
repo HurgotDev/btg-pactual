@@ -20,3 +20,7 @@ Ubicados en carpeta raíz (btg-pactual), correr el comando
 ```
 docker-compose up
 ```
+
+Si los pasos anteriores se finalizarion con exito, podrá visularzar el funcionamiento en:
+
+http://localhost:3000
